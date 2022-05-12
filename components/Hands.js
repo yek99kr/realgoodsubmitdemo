@@ -16,7 +16,7 @@ const Hands = () => {
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 30], fov: 30 }}
-        // frameloop="demand"
+        frameloop="demand"
       >
         <hemisphereLight intensity={0.7} position={[0, 50, 0]} />
         <directionalLight intensity={0.8} position={[-8, 20, 8]} />

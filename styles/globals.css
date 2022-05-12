@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   /* font-family: "Inter", sans-serif; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a {
@@ -123,28 +123,6 @@ a {
   animation: bounce 1s ease infinite 0.8s;
 }
 
-.deck1 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite;
-}
-
-.deck2 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.1s;
-}
-.deck3 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.2s;
-}
-.deck4 {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1s ease infinite 0.3s;
-}
-
 .insta1:hover {
   transform: scaleX(-1) scaleY(1);
 }
@@ -173,15 +151,18 @@ a {
   transform: scaleX(-1) scaleY(1);
 }
 
-.deck1:hover {
-  transform: scaleX(-1) scaleY(1);
+.submitButton {
+  box-shadow: 0px 6px #d2d2d2;
+  transition: 0.2s;
+  user-select: none;
 }
-.deck2:hover {
-  transform: scaleX(-1) scaleY(1);
+
+.submitButton:active {
+  transform: translateY(6px);
+  box-shadow: 0px 0px #8b8b8b;
 }
-.deck3:hover {
-  transform: scaleX(-1) scaleY(1);
-}
-.deck4:hover {
-  transform: scaleX(-1) scaleY(1);
-}
+
+/* select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+} */

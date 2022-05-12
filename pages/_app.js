@@ -1,25 +1,27 @@
 import "../styles/globals.css";
-import { Loader, useProgress } from "@react-three/drei";
+import SEO from "../components/SEO";
+import Nav from "../components/Nav";
+import { useRouter } from "next/router";
+import ShopProvider from "../context/shopContext";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
-// function Progress() {
-//   const { active, progress, errors, item, loaded, total } = useProgress();
-//   return <Html center>{progress} % loaded</Html>;
-// }
-
-// const renderMethod = module.hot ? React.render : React.hydrate;
-// renderMethod(
-//   <BrowserRouter>
-//     <RoutersController data={data} routes={routes} />
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
+import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   return (
-    <div>
-      <Component {...pageProps} />
-      {/* <Loader /> */}
-    </div>
+    <ShopProvider>
+      {/* <AnimatePresence> */}
+      <div>
+        <SEO />
+        <Nav />
+
+        <Component {...pageProps} key={router.asPath} />
+      </div>
+      {/* </AnimatePresence>{" "} */}
+    </ShopProvider>
   );
 }
 

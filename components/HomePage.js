@@ -63,7 +63,10 @@ const HomePage = () => {
   return (
     <>
       {isSmallWidth ? (
-        <div className="absolute top-0 left-0 bg-[#e9ebf0] w-[100vw] h-[100vh]"></div>
+        <div
+          className="absolute top-0 left-0 bg-[#e9ebf0] w-[100%] h-[100%] "
+          style={{ overflow: "hidden" }}
+        ></div>
       ) : (
         <DragBackground />
       )}

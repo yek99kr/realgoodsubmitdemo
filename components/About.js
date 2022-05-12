@@ -1,5 +1,6 @@
 import AboutDropDown from "./AboutDropDown";
 import { useState } from "react";
+import Link from "next/link";
 
 const About = (props) => {
   const [hoverInsta, setHoverInsta] = useState(false);
@@ -93,100 +94,93 @@ const About = (props) => {
   ];
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[63%] leading-[2.4] w-[85vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[25px] text-center">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[61%] leading-[2.4] w-[80vw]  md:w-[60vw] md:leading-[2.2] lg:w-[55vw] lg:leading-[1.9] text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[23.8px] text-center">
       <p className="font-[400]">
         We&apos;re{" "}
         <img
           src="/logoShort.png"
-          className="inline w-[61px] sm:w-[75px] md:w-[85px] lg:w-[95px] xl:w-[100px] 2xl:w-[115px] ml-0.5 mr-0.5"
+          className="inline w-[61px] sm:w-[75px] md:w-[85px] lg:w-[95px] xl:w-[100px] 2xl:w-[105px] ml-0.5 mr-0.5"
         />
         . We&apos;re a <AboutDropDown madWords={madWords1} /> creative studio
         specializing in <AboutDropDown madWords={madWords2} />.
       </p>
 
-      <p className="font-[400] pt-8">
+      <p className="font-[400] pt-6">
         We work with <AboutDropDown madWords={madWords3} /> to make{" "}
         <AboutDropDown madWords={madWords4} />.
       </p>
 
-      <p className="font-[400] pt-8">
+      <p className="font-[400] pt-6">
         We make work that <AboutDropDown madWords={madWords6} /> the{" "}
         <AboutDropDown madWords={madWords7} /> between{" "}
         <AboutDropDown madWords={madWords8} /> and{" "}
         <AboutDropDown madWords={madWords9} />.
       </p>
-      {props.isSmallWidth ? (
-        <p className="font-[400] pt-8">
-          We have an{" "}
-          <a
-            href="https://www.instagram.com/real.good.studio/"
-            target="_blank"
-            rel="noreferrer"
+
+      <p className="font-[400] pt-6">
+        We have an{" "}
+        <a
+          href="https://www.instagram.com/real.good.studio/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span
+            className="insta cursor-pointer inline-block  noselect thumbcursor"
+            onMouseEnter={() => setHoverInsta(true)}
+            onMouseLeave={() => setHoverInsta(false)}
           >
+            <span className="insta1 text-pink-500">i</span>
+            <span className="insta2 text-sky-400">n</span>
+            <span className="insta3 text-yellow-500">s</span>
+            <span className="insta4 text-purple-500">t</span>
+            <span className="insta5 text-pink-500">a</span>
+            <span className="insta6 text-sky-400">g</span>
+            <span className="insta7 text-pink-500">r</span>
+            <span className="insta8 text-yellow-500">a</span>
+            <span className="insta9 text-green-500">m</span>
+          </span>
+        </a>{" "}
+        and{" "}
+        <Link href="/projects" passHref>
+          <a>
             <span
-              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
+              className="insta cursor-pointer inline-block noselect thumbcursor"
               onMouseEnter={() => setHoverInsta(true)}
               onMouseLeave={() => setHoverInsta(false)}
             >
-              <span className="insta1 text-pink-500">i</span>
-              <span className="insta2 text-sky-400">n</span>
-              <span className="insta3 text-yellow-500">s</span>
-              <span className="insta4 text-purple-500">t</span>
-              <span className="insta5 text-pink-500">a</span>
-              <span className="insta6 text-sky-400">g</span>
-              <span className="insta7 text-pink-500">r</span>
-              <span className="insta8 text-yellow-500">a</span>
-              <span className="insta9 text-green-500">m</span>
+              <span className="insta1 text-pink-500">p</span>
+              <span className="insta2 text-sky-400">r</span>
+              <span className="insta3 text-yellow-500">o</span>
+              <span className="insta4 text-purple-500">j</span>
+              <span className="insta5 text-pink-500">e</span>
+              <span className="insta2 text-sky-400">c</span>
+              <span className="insta3 text-yellow-500">t</span>
+              <span className="insta4 text-purple-500">s</span>
             </span>
-          </a>{" "}
-          with some work.
-        </p>
-      ) : (
-        <p className="font-[400] pt-8">
-          We have an{" "}
-          <a
-            href="https://www.instagram.com/real.good.studio/"
-            target="_blank"
-            rel="noreferrer"
-          >
+            {/* <img src="work.png" className="w-[1.3em] inline m-2 noselect" /> */}
+          </a>
+        </Link>{" "}
+        with some works, and{" "}
+        <Link href="/store" passHref>
+          <a>
             <span
-              className="insta cursor-pointer inline-block w-[63px] sm:w-[85px] md:w-[90px] lg:w-[105px] xl:w-[120px] 2xl:w-[130px] noselect thumbcursor"
-              onMouseEnter={() => setHoverInsta(true)}
-              onMouseLeave={() => setHoverInsta(false)}
-            >
-              <span className="insta1 text-pink-500">i</span>
-              <span className="insta2 text-sky-400">n</span>
-              <span className="insta3 text-yellow-500">s</span>
-              <span className="insta4 text-purple-500">t</span>
-              <span className="insta5 text-pink-500">a</span>
-              <span className="insta6 text-sky-400">g</span>
-              <span className="insta7 text-pink-500">r</span>
-              <span className="insta8 text-yellow-500">a</span>
-              <span className="insta9 text-green-500">m</span>
-            </span>
-          </a>{" "}
-          with some work and a{" "}
-          <a
-            href="https://realgooddeck.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className="deck inline-block w-[33px] sm:w-[40px] md:w-[43px] lg:w-[51px] xl:w-[59px] 2xl:w-[62px] noselect thumbcursor"
+              className="deck inline-block noselect thumbcursor"
               onMouseEnter={() => setHoverDeck(true)}
               onMouseLeave={() => setHoverDeck(false)}
             >
-              <span className="deck1 text-purple-500">d</span>
-              <span className="deck2 text-yellow-500">e</span>
-              <span className="deck3 text-sky-400">c</span>
-              <span className="deck4 text-pink-500">k</span>
-            </span>{" "}
+              <span className="insta1 text-purple-500">s</span>
+              <span className="insta2 text-yellow-500">t</span>
+              <span className="insta3 text-sky-400">o</span>
+              <span className="insta4 text-pink-500">r</span>
+              <span className="insta5 text-green-500">e</span>
+            </span>
+            {/* <img src="shop.png" className="w-[1.3em] inline m-2 noselect" /> */}
           </a>
-          with some more work.
-        </p>
-      )}
+        </Link>{" "}
+        with our goods.
+      </p>
 
-      <p className="font-[400] pt-8 select-auto">
+      <p className="font-[400] pt-6 select-auto">
         Currently taking on select projects{" "}
         <a href="mailto: hi@realgood.tv" target="_blank" rel="noreferrer">
           <span
@@ -203,6 +197,10 @@ const About = (props) => {
           </span>
         </a>
       </p>
+
+      <button className="bg-white text-gray-800 font-semibold px-[15%] rounded mt-10 text-[12px] sm:text-[16px] md:text-[17px] lg:text-[20px] xl:text-[23px] 2xl:text-[20px] thumbcursor submitButton">
+        Submit
+      </button>
     </div>
   );
 };

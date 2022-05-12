@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 const DragBackground = () => {
   return (
-    <>
+    <div
+      className="absolute w-[100vw] h-[100vh]"
+      style={{ overflow: "hidden" }}
+    >
       <div className="font-mono absolute inline top-0 left-0 w-[100vw] h-[100vh] text-sm p-4 z-[-1]">
         <p style={{ color: "gray" }}> &lt;!DOCTYPE html&gt;</p>
         <p style={{ color: "#c10058" }}>&lt;html&gt;</p>
@@ -227,7 +230,7 @@ const DragBackground = () => {
       ></motion.div>
 
       <div className="absolute z-[-1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[50%] w-[55%] h-[45%] opacity-[0.7] bg-white"></div>
-    </>
+    </div>
   );
 };
 
