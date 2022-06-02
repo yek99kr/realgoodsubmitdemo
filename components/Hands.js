@@ -1,7 +1,7 @@
 import { Suspense, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import Hand from "./Hand";
-import { Text, useTexture, Html } from "@react-three/drei";
+import { useTexture, Html } from "@react-three/drei";
 import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon";
 
 function Ball({ start, setStart }) {
