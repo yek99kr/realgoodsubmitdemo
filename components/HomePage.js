@@ -5,6 +5,7 @@ import About from "./About";
 import { useState, useCallback, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 import { motion } from "framer-motion";
+import { Text } from "@react-three/drei";
 
 const useMediaQueryWidth = (width) => {
   const [targetReached, setTargetReached] = useState(false);
