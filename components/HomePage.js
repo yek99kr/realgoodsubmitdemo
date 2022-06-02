@@ -4,6 +4,7 @@ import DragBackground from "./DragBackground";
 import About from "./About";
 import { useState, useCallback, useEffect } from "react";
 import { isMobile } from "react-device-detect";
+import { motion } from "framer-motion";
 
 const useMediaQueryWidth = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -56,7 +57,7 @@ const useMediaQueryHeight = (height) => {
   return targetReached;
 };
 
-const HomePage = () => {
+const HomePage = ({ router }) => {
   const isSmallWidth = useMediaQueryWidth(961);
   const isSmallHeight = useMediaQueryHeight(650);
 
@@ -72,7 +73,15 @@ const HomePage = () => {
       )}
 
       {!isSmallHeight && <Ad />}
-      <About isSmallWidth={isSmallWidth} />
+      <motion.div
+        layout
+        key={router.route}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        <About isSmallWidth={isSmallWidth} />
+      </motion.div>
 
       {isSmallWidth || isMobile || isSmallHeight ? null : <Hands />}
     </>

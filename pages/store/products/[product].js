@@ -1,10 +1,11 @@
 import { getAllProducts, getProduct } from "../../../lib/shopify";
-import ProductPageContent from "../../../components/ProductPageContent";
+import ProductDetail from "../../../components/ProductDetail";
+import { motion } from "framer-motion";
 
-export default function ProductPage({ product }) {
+export default function ProductPage({ product, router }) {
   return (
     <div className="min-h-screen py-12 sm:pt-20">
-      <ProductPageContent product={product} />
+      <ProductDetail product={product} />
     </div>
   );
 }

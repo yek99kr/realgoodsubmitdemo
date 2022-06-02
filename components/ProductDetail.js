@@ -25,7 +25,7 @@ export default function ProductPageContent({ product }) {
     <>
       <div className="flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto">
         <div className="w-full max-w-md rounded-2xl overflow-hidden  md:w-1/2">
-          <div className="relative h-96 w-full">
+          <div className="relative h-[80vh] w-full">
             <Swiper
               style={{
                 "--swiper-navigation-color": "#000",
@@ -33,7 +33,7 @@ export default function ProductPageContent({ product }) {
               }}
               navigation
               pagination={{ clickable: true }}
-              className="h-96 rounded-2xl"
+              className="h-[80vh] w-auto backdrop-blur  rounded-2xl"
               // loop="true"
             >
               {images}

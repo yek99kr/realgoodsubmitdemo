@@ -8,7 +8,8 @@ body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   /* font-family: "Inter", sans-serif; */
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
+  overflow: hidden;
 }
 
 a {
@@ -166,3 +167,8 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
 } */
+
+::selection {
+  /* color: white; */
+  background: lightgray;
+}

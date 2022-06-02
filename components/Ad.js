@@ -10,7 +10,7 @@ const Ad = ({ props }) => {
       <Canvas
         dpr={[1, 2]}
         camera={{ position: [0, 0, 10], fov: 15 }}
-        frameloop="demand"
+        // frameloop="demand"
       >
         <ambientLight intensity={0.7} />
         <pointLight intensity={0.7} position={[8, 7, 5]} />

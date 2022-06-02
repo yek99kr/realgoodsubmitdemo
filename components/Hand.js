@@ -5,8 +5,6 @@ import { useGraph, useFrame } from "@react-three/fiber";
 import { SkeletonUtils } from "three-stdlib";
 import { getMouseDegrees } from "../utils/getMouseDegrees";
 
-function grabphone() {}
-
 function moveJoint(mouse, joint, degreeLimit = 40) {
   let degrees = getMouseDegrees(-mouse.y + 400, mouse.x, degreeLimit);
   joint.rotation.xD = THREE.MathUtils.lerp(
@@ -14,6 +12,7 @@ function moveJoint(mouse, joint, degreeLimit = 40) {
     degrees.y,
     0.3
   );
+
   joint.rotation.yD = THREE.MathUtils.lerp(
     joint.rotation.yD || 0,
     degrees.x,

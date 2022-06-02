@@ -1,9 +1,9 @@
 import HomePage from "../components/HomePage";
 
-export default function Home() {
+export default function Home({ router }) {
   return (
     <>
-      <HomePage />
+      <HomePage router={router} />
     </>
   );
 }
