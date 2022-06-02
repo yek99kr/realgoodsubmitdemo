@@ -69,17 +69,17 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
 
   return (
     <mesh ref={ref}>
-      {/* <Html
+      <Html
         transform
         position={[0, 0.05, 0.5]}
         className="transform relative pointer-events-none"
       >
         <div className="relative pointer-events-none">Submit</div>
-      </Html> */}
+      </Html>
       <boxGeometry args={args}></boxGeometry>
 
       <meshBasicMaterial color="white" toneMapped={false} />
-      <Text
+      {/* <Text
         color="black"
         anchorX="center"
         anchorY="middle"
@@ -87,7 +87,7 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
         fontSize={0.37}
       >
         Submit
-      </Text>
+      </Text> */}
     </mesh>
   );
 }
