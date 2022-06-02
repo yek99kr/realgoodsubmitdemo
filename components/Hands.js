@@ -79,15 +79,6 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
       <boxGeometry args={args}></boxGeometry>
 
       <meshBasicMaterial color="white" toneMapped={false} />
-      {/* <Text
-        color="black"
-        anchorX="center"
-        anchorY="middle"
-        position={[0, 0.05, 0.5]}
-        fontSize={0.37}
-      >
-        Submit
-      </Text> */}
     </mesh>
   );
 }
