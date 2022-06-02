@@ -1,7 +1,7 @@
 import { Suspense, useState, useEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import Hand from "./Hand";
-import { Text, useTexture, Html } from "@react-three/drei";
+import { Text, useTexture } from "@react-three/drei";
 import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon";
 
 function Ball({ start, setStart }) {
@@ -69,13 +69,6 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
 
   return (
     <mesh ref={ref}>
-      {/* <Html
-        transform
-        position={[0, 0.05, 0.5]}
-        className="transform relative pointer-events-none"
-      >
-        <div className="relative pointer-events-none">Submit</div>
-      </Html> */}
       <boxGeometry args={args}></boxGeometry>
 
       <meshBasicMaterial color="white" toneMapped={false} />
