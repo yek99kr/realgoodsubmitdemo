@@ -3,7 +3,7 @@ import Head from "next/head";
 const SEO = () => {
   return (
     <Head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <title>Real Good Studio</title>
       <meta

@@ -1,8 +1,7 @@
-import * as THREE from "three";
 import { Suspense, useState, useEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import Hand from "./Hand";
-import { Text, useTexture } from "@react-three/drei";
+import { Text, useTexture, Html } from "@react-three/drei";
 import { Physics, useSphere, useBox, usePlane } from "@react-three/cannon";
 
 function Ball({ start, setStart }) {
@@ -29,15 +28,6 @@ function Ball({ start, setStart }) {
 
   return (
     <mesh castShadow ref={ref}>
-      {/* <Text
-        color="black"
-        anchorX="center"
-        anchorY="middle"
-        position={[0, 0, 0.5]}
-        fontSize={0.35}
-      >
-        {score}
-      </Text> */}
       <sphereGeometry args={[0.45, 16, 16]} />
       <meshBasicMaterial map={map} toneMapped={false} />
     </mesh>
@@ -79,7 +69,16 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
 
   return (
     <mesh ref={ref}>
+      {/* <Html
+        transform
+        position={[0, 0.05, 0.5]}
+        className="transform relative pointer-events-none"
+      >
+        <div className="relative pointer-events-none">Submit</div>
+      </Html> */}
       <boxGeometry args={args}></boxGeometry>
+
+      <meshBasicMaterial color="white" toneMapped={false} />
       <Text
         color="black"
         anchorX="center"
@@ -89,7 +88,6 @@ function Paddle({ args = [5, 0.65, 0.6], start }) {
       >
         Submit
       </Text>
-      <meshBasicMaterial color="white" toneMapped={false} />
     </mesh>
   );
 }
@@ -106,14 +104,6 @@ const Hands = ({ router }) => {
 
   return (
     <>
-      {!start && (
-        <div
-          className="absolute w-[275px] h-[50px] z-[1] left-[41.9%] top-[63%] translate-x-[-50%] translate-y-[-1/2] thumbcursor"
-          onClick={(e) => {
-            setStart(true);
-          }}
-        ></div>
-      )}
       <div
         className="w-[100vw] h-[100vh] pointer-events-none"
         style={{ pointerEvent: "none" }}
@@ -189,6 +179,14 @@ const Hands = ({ router }) => {
           </Suspense>
         </Canvas>
       </div>
+      {!start && (
+        <div
+          className="absolute w-[275px] h-[50px] z-[100] left-[41.9%] top-[63%] translate-x-[-50%] translate-y-[-1/2] thumbcursor"
+          onClick={(e) => {
+            setStart(true);
+          }}
+        ></div>
+      )}
     </>
   );
 };
